@@ -5,9 +5,9 @@ services:
     region: oregon
     plan: free
     runtime: python-3.9
-    rootDir: Backend
+    rootDir: HRM_SOFT
     buildCommand: "pip install -r ../requirements.txt && cd HRM_SOFT && python manage.py migrate --noinput && python manage.py collectstatic --noinput"
-    startCommand: "gunicorn Backend.HRM_SOFT.HRM_SOFT.wsgi:application"
+    startCommand: "gunicorn HRM_SOFT.HRM_SOFT.wsgi:application"
     envVars:
       - key: PYTHON_VERSION
         value: 3.9.18
