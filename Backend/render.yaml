@@ -7,7 +7,7 @@ services:
     runtime: python-3.9
     rootDir: HRM_SOFT
     buildCommand: "pip install -r ../requirements.txt && python manage.py migrate --noinput && python manage.py collectstatic --noinput"
-    startCommand: "gunicorn hrm_soft.hrm_soft.wsgi:application"
+    startCommand: "gunicorn HRM_SOFT.HRM_SOFT.wsgi:application"
     envVars:
       - key: PYTHON_VERSION
         value: 3.9.18
