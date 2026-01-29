@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: hrm-soft-api
+    env: python
+    region: oregon
+    plan: free
+    runtime: python-3.9
+    buildCommand: "pip install -r requirements.txt && cd HRM_SOFT && python manage.py migrate --noinput && python manage.py collectstatic --noinput"
+    startCommand: "cd HRM_SOFT && gunicorn HRM_SOFT.wsgi"
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.9.18
+      - key: DJANGO_SETTINGS_MODULE
+        value: HRM_SOFT.settings
+      - key: PYTHONUNBUFFERED
+        value: true

@@ -33,3 +33,5 @@ Thumbs.db
 README.md
 SETUP_GUIDE.md
 UPGRADE_SUMMARY.md
+vercel.json
+build.sh
