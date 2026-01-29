@@ -1,0 +1,35 @@
+# Python
+__pycache__
+*.pyc
+*.egg-info
+dist
+build
+venv
+env
+.env
+
+# Database
+*.sqlite3
+db.sqlite3
+
+# Frontend
+frontend
+frontend/**
+
+# IDE
+.vscode
+.idea
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Misc
+.git
+.gitignore
+README.md
+SETUP_GUIDE.md
+UPGRADE_SUMMARY.md

@@ -1,5 +1,6 @@
 {
   "version": 2,
+  "buildCommand": "bash ../build.sh",
   "builds": [
     {
       "src": "HRM_SOFT/wsgi.py",
@@ -12,11 +13,16 @@
   ],
   "routes": [
     {
+      "src": "/static/(.*)",
+      "dest": "/static/$1"
+    },
+    {
       "src": "/(.*)",
       "dest": "HRM_SOFT/wsgi.py"
     }
   ],
   "env": {
-    "DJANGO_SETTINGS_MODULE": "HRM_SOFT.settings"
+    "DJANGO_SETTINGS_MODULE": "HRM_SOFT.settings",
+    "PYTHONUNBUFFERED": "1"
   }
 }
